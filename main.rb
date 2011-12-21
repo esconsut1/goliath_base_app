@@ -8,7 +8,7 @@ class Main < Goliath::API
 	#  let the proxy do the dirty work
 	use(Rack::Static,
 		:root => Goliath::Application.app_path("public"),
-		:urls => ["/favicon.ico", '/stylesheets', '/javascripts', '/images'])
+		:urls => ["/favicon.ico", '/stylesheets', '/javascripts', '/images', '/robots.txt']
 	)
 
 	#- Some other routes to your custom Goliath class
