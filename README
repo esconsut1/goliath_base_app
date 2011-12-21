@@ -6,7 +6,7 @@ We love Rails, we love Sinatra even more and we love Goliath just a teensy bit m
 More on Goliath:
 https://github.com/postrank-labs/goliath
 
-Event Programming:
+Event Machine:
 https://github.com/eventmachine/eventmachine
 
 I liked the idea of using Goliath to serve up smaller apps that are generally just a few thousand lines of code or less.
@@ -46,6 +46,19 @@ In your browser:
 /me
 /me/some_action/99
 
+Views:
+# app/views/me/index.erb
+
+<strong>Hello there! <%= @id %></strong>
+
+Layouts:
+# app/views/layouts/application.erb
+
+<html>
+<body>
+	<%= yield %>
+</body>
+</html>
 
 MVC CONVENTIONS:
 ----------------
