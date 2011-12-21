@@ -3,14 +3,86 @@ Goliath Base App
 
 We love Rails, we love Sinatra even more and we love Goliath just a teensy bit more.
 
+More on Goliath:
+https://github.com/postrank-labs/goliath
+
+Event Programming:
+https://github.com/eventmachine/eventmachine
+
 I liked the idea of using Goliath to serve up smaller apps that are generally just a few thousand lines of code or less.
+
+In a couple of hours I hacked together this base app that we at W3matter could continually improve and use in small high-performing setting.
 
 So goliath_base_app was born.
 
 USEAGE:
 -------
 
-1. Clone the repo
-<code>
+1. Clone the repo and bundle 'er up!
+
 # git clone 
-</code>
+# bundle install
+
+2. Startup the server
+
+# ruby main.rb -sv -p 3000
+
+3. Hack away.
+
+CONTROLLERS:
+
+# app/controllers/me_controller.rb
+
+Class MeController < ApplicationController
+	def index
+	end
+
+	def some_action
+		@id = params[:id]
+	end
+end
+
+In your browser:
+/me
+/me/some_action/99
+
+
+MVC CONVENTIONS:
+----------------
+
+Directories
+Basically, the same as rails.
+----
+app
+app/views
+app/controllers
+app/models
+
+Routing
+----
+Routes are stored in main.rb
+You'll see the default route in there. Don't remove it unless you need to be more restful or explicit.
+You can add more routes ahead of that one.
+
+Database
+----
+This is Goliath, and EventMachine under the hood. So use the appropriate database drivers.
+
+
+PERFORMANCE:
+------------
+
+Going through *this* full stack in production mode is consistently under 2ms. That's right. Under 2 milliseconds.
+
+
+CAVEATS:
+--------
+
+1. I'm not the best ruby programmer in the world. So if you have suggestions, let me know. Do a pull request. Keep things constructive.
+
+2. There are no tests are yet
+
+3. There are surely bugs lurking around.
+
+4. This is not intended to be a replacement for Rails or even Sinatra
+It's a solution for small, extremely lightweight apps that inherits the benefits of event programming without spaghetti. Exactly what Goliath brings to the table.
