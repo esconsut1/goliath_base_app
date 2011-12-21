@@ -1,1 +1,1 @@
-#- Our library routines
+#- Some library routines
