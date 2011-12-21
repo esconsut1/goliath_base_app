@@ -1,0 +1,16 @@
+Goliath Base App
+----------------
+
+We love Rails, we love Sinatra even more and we love Goliath just a teensy bit more.
+
+I liked the idea of using Goliath to serve up smaller apps that are generally just a few thousand lines of code or less.
+
+So goliath_base_app was born.
+
+USEAGE:
+-------
+
+1. Clone the repo
+<code>
+# git clone 
+</code>
